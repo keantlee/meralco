@@ -6,14 +6,14 @@
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link active" href="#"><span
-                                data-feather="home"></span>Dashboard <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#"><span data-feather="home"></span>Dashboard
+                            <span class="sr-only">(current)</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file"></span>User
                             Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span
                                 data-feather="shopping-cart"></span>Course</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span
-                                data-feather="users"></span>Assesstment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span data-feather="users"></span>Sites</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -38,31 +38,24 @@
                 <table class="table table-striped table-sm">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>IP ADDRESS</th>
                             <th>TEMPERATURE</th>
-                            <th>HUMIDITY</th>
+                            <th>LIGHT</th>
+                            <th>BATTERY</th>
+                            <th>EC</th>
+                            <th>PH</th>
+                            <th>WATER LEVEL</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>31&#8451</td>
-                            <td>21&#37</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>32&#8451</td>
-                            <td>21&#37</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>31&#8451</td>
-                            <td>21&#37</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>31&#8451</td>
-                            <td>21&#37</td>
+                            <td>{{$ip_address}}</td>
+                            <td>{{$temperature}}</td>
+                            <td>{{$light}}</td>
+                            <td>{{$battery}}</td>
+                            <td>{{$EC}}</td>
+                            <td>{{$PH}}</td>
+                            <td>{{$water}}</td>
                         </tr>
                     </tbody>
                 </table>
