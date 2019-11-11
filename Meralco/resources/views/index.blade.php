@@ -13,7 +13,7 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span
                                 data-feather="shopping-cart"></span>Course</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span
-                                data-feather="users"></span>Assesstment</a></li>
+                                data-feather="users"></span>SITE</a></li>
                 </ul>
             </div>
         </nav>
