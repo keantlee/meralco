@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/', 'ClientAddressController@getUserIpAddr')->name('get.user.address');
