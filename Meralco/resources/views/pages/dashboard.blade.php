@@ -6,12 +6,10 @@
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link active" href="#"><span data-feather="home"></span>Dashboard
+                    <li class="nav-item"><a class="nav-link active" href="/dashboard"><span data-feather="home"></span>Dashboard
                             <span class="sr-only">(current)</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file"></span>User
                             Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span
-                                data-feather="shopping-cart"></span>Course</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span data-feather="users"></span>Sites</a>
                     </li>
                 </ul>
@@ -34,36 +32,10 @@
                 </div>
             </div>
 
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                        <tr>
-                            <th>IP ADDRESS</th>
-                            <th>TEMPERATURE</th>
-                            <th>LIGHT</th>
-                            <th>BATTERY</th>
-                            <th>EC</th>
-                            <th>PH</th>
-                            <th>WATER LEVEL</th>
-                            <th>STATUS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($sensors as $sensor)
-                        <tr>
-                            <td>{{$sensor->ip_address}}</td>
-                            <td>{{$sensor->temperature}}</td>
-                            <td>{{$sensor->light}}</td>
-                            <td>{{$sensor->battery}}</td>
-                            <td>{{$sensor->EC}}</td>
-                            <td>{{$sensor->PH}}</td>
-                            <td>{{$sensor->water_level}}</td>
-                            <td>{{$sensor->status_id}}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+            <div>
+                {{-- insert content here --}}
             </div>
+
         </main>
     </div>
 </div>
