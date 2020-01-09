@@ -10,9 +10,11 @@
 
 {{-- CUSTOMIZE CSS --}}
 <link rel="stylesheet" href="{{asset('/css/navbar.css')}}">
+<link rel="stylesheet" href="{{asset('/css/map.css')}}">
+<link rel="stylesheet" href="{{asset('/css/dataset_cards.css')}}">
 
 {{-- CUSTOMIZE JS --}}
-{{-- <script src="{{assets('')}}"></script> --}}
+<script src="{{asset('/js/show_location_map.js')}}"></script>
 
 {{-- JQuery --}}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

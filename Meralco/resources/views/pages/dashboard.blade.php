@@ -3,18 +3,8 @@
 @section('contents')
 <div class="container-fluid">
     <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link active" href="/dashboard"><span data-feather="home"></span>Dashboard
-                            <span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file"></span>User
-                            Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span data-feather="users"></span>Sites</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        
+        @include('layouts.side_bar_content')
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div
@@ -33,10 +23,21 @@
             </div>
 
             <div>
-                {{-- insert content here --}}
+                {{-- <form method="POST">
+                    {{ csrf_field() }}
+                    <input class="form-control input-lg" type="text" name="search_location" id="search_location" placeholder="Enter Site Name Location">
+                    <input type="button" value="Submit">
+                    <div id="siteList"></div>
+                </form> --}}
+            </div>
+
+            <div id="map">
+
             </div>
 
         </main>
     </div>
 </div>
+	{{-- Fetch all location_markers using show_marker_controller.php from the database  --}}
+	<script> var location_markers = {!! json_encode( $markers ) !!}; </script>
 @endsection

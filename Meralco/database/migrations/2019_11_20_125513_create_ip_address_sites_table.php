@@ -15,8 +15,11 @@ class CreateIpAddressSitesTable extends Migration
     {
         Schema::create('ip_address_sites', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ip_address');
-            $table->string('site_name');
+            $table->ipAddress('ip_address');
+            $table->string('name');
+            $table->string('address');
+            $table->decimal('latitude', 8, 6);
+            $table->decimal('longitude', 20, 6);
             $table->timestamps();
         });
     }
