@@ -4,37 +4,85 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\sensor_datalog;
+
 class APIController extends Controller
 {
     /**
-     * Insert Data
-     **/ 
-    public function insertData()
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        
+        //
     }
 
     /**
-     * Retrieve Data
-     **/
-    public function retreiveData()
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-        
+        //
     }
 
     /**
-     * Update Data
-     **/
-    public function updateData()
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-
+        //
     }
 
     /**
-     * Show history of data
-     **/
-    public function dataHistory()
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
+        $sensors = sensor_datalog::findOrFail($id);
 
+        return view('pages.site_datalog', ['sensors' => $sensors]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\site_01_sensor;
 
+
 // use Path\To\DOMDocument;
 
 class ClientAddressController extends Controller
@@ -111,26 +112,5 @@ class ClientAddressController extends Controller
         else{
             return view('index');
         }
-    }
-    
-    public function dashboard()
-    {
-        return view('pages.dashboard');
-    }
-
-    public function site01(Request $request)
-    {
-        // $sensors = site_01_sensor::select('id','ip_address', 'temperature', 'light', 'battery', 'EC', 'PH', 'water_level', 'status_id')->where('ip_address','LIKE', '%'."192.168.1.3".'%')->get();
-
-        // return view('pages.site_01_datalog', compact('sensors'));
-        return view('pages.site_01_datalog');
-    }
-
-    public function site02(Request $request)
-    {
-        // $sensors = site_01_sensor::select('id','ip_address', 'temperature', 'light', 'battery', 'EC', 'PH', 'water_level', 'status_id')->where('ip_address','LIKE', '%'."192.168.1.2".'%')->get();
-
-        // return view('pages.site_02_datalog', compact('sensors'));
-        return view('pages.site_02_datalog');
     }
 }

@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('/welcome');
 });
 
-Route::get('/dashboard', 'ClientAddressController@dashboard')->name('view_dashboard');
-Route::get('/site_datalog', 'ClientAddressController@getSiteData')->name('get_site_data');
-Route::get('/site_01_datalog', 'ClientAddressController@site01')->name('site_01');
-Route::get('/site_02_datalog', 'ClientAddressController@site02')->name('site_02');
+Route::get('/dashboard', 'dashboardController@showMap')->name('view_dashboard_map');
+Route::get('/dashboard/{name?}', 'dashboardController@autocomplete')->name('autocomplete.fetch');
+Route::get('/dashboard/site_datalog/{id}', 'dashboardController@showSiteLog')->name('view_site_log');
+
+//Resources
+// Route::resource('/site_datalog', 'APIController');
