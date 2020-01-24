@@ -21,3 +21,7 @@ Route::get('/dashboard/site_datalog/{id}', 'dashboardController@showSiteLog')->n
 
 //Resources
 // Route::resource('/site_datalog', 'APIController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
